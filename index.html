@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"干员猜猜乐"小助手</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-container">
+            <div><span class="title">"干员猜猜乐"小助手</span></div>
+            <div><a href="http://akguess.saki.cc/">原版游戏点这里</a></div>
+            <div class="guesses">
+                <div class="header">
+                    <div class="column"><span class="title">稀有度</span></div>
+                    <div class="column"><span class="title">阵营</span></div>
+                    <div class="column"><span class="title">职业</span></div>
+                    <div class="column"><span class="title">种族</span></div>
+                    <div class="column"><span class="title">画师</span></div>
+                    <div class="column"><span class="title">干员</span></div>
+                </div>
+            </div>
+            <form class="input-form" autocomplete="off" action="javascript:void(0)">
+                <div class="autocomplete"><input id="guess" placeholder="请输入干员名称"></div><input class="guess_input"
+                    type="submit" value="提交">
+            </form>
+            <div class="inference">
+                <button id="infer">推理！</button>
+                <button id="reset">清空</button>
+            </div>
+            <div class="table-container">
+                <div><span class="infer-title">符合条件的干员可能是：</span></div>
+                <ul class="table"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
