@@ -112,40 +112,41 @@ function makeInference() {
     }
     $(".active").removeClass("active");
     const filters = {rarity: [], team: [], className: [], race: [], painter: []}
-    const lastRow = $(".row:last");
-    const operator = getOperatorByName(lastRow.find(".tooltip:first").text());
-    lastRow.children().each(function() {
-        var attr, filterType;
-        if ($(this).hasClass("rarity")) {
-            attr = "rarity";
-        } else if ($(this).hasClass("team")) {
-            attr = "team";
-        } else if ($(this).hasClass("className")) {
-            attr = "className";
-        } else if ($(this).hasClass("race")) {
-            attr = "race";
-        } else if ($(this).hasClass("painter")) {
-            attr = "painter";
-        }
-        const emoji = $(this).children(".emoji:first");
-        if (emoji.hasClass("correct")) {
-            filterType = "correct";
-        } else if (emoji.hasClass("wrong")) {
-            filterType = "wrong";
-        } else if (emoji.hasClass("wrongpos")) {
-            filterType = "wrongpos";
-        } else if (emoji.hasClass("up")) {
-            filterType = "up";
-        } else if (emoji.hasClass("down")) {
-            filterType = "down";
-        }
-        if (attr && filterType && operator) {
-            let filter = makeFilter(attr, filterType, operator);
-            if (filterType === "correct") {
-                filters[attr].length = 0;
+    $(".row").each(function() {
+        const operator = getOperatorByName($(this).find(".tooltip:first").text());
+        $(this).children().each(function() {
+            let attr, filterType;
+            if ($(this).hasClass("rarity")) {
+                attr = "rarity";
+            } else if ($(this).hasClass("team")) {
+                attr = "team";
+            } else if ($(this).hasClass("className")) {
+                attr = "className";
+            } else if ($(this).hasClass("race")) {
+                attr = "race";
+            } else if ($(this).hasClass("painter")) {
+                attr = "painter";
             }
-            filters[attr].push(filter);
-        }
+            const emoji = $(this).children(".emoji:first");
+            if (emoji.hasClass("correct")) {
+                filterType = "correct";
+            } else if (emoji.hasClass("wrong")) {
+                filterType = "wrong";
+            } else if (emoji.hasClass("wrongpos")) {
+                filterType = "wrongpos";
+            } else if (emoji.hasClass("up")) {
+                filterType = "up";
+            } else if (emoji.hasClass("down")) {
+                filterType = "down";
+            }
+            if (attr && filterType && operator) {
+                let filter = makeFilter(attr, filterType, operator);
+                if (filterType === "correct") {
+                    filters[attr].length = 0;
+                }
+                filters[attr].push(filter);
+            }
+        });
     });
     for (let key of Object.keys(filters)) {
         for (let filter of filters[key]) {
