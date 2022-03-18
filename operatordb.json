@@ -285,7 +285,7 @@
             "\u901F\u5C04\u624B"
         ],
         "name": "\u6B63\u4E49\u9A91\u58EB\u53F7",
-        "en": "",
+        "en":"\"Justice Knight\"",
         "team": [
             "\u7EA2\u677E\u9A91\u58EB\u56E2",
             "\u5361\u897F\u7C73\u5C14"
@@ -3692,5 +3692,53 @@
         ],
         "rarity": 0,
         "painter": "TOKI"
+    },
+    {
+        "className": [
+            "\u72D9\u51FB",
+            "\u70AE\u624B"
+        ],
+        "name": "\u83F2\u4E9A\u6885\u5854",
+        "en": "Fiammetta",
+        "team": [
+            "\u62C9\u7279\u5170"
+        ],
+        "race": [
+            "\u9ECE\u535A\u5229"
+        ],
+        "rarity": 5,
+        "painter": "\u5E7B\u8C61\u9ED1\u5154"
+    },
+    {
+        "className": [
+            "\u7279\u79CD",
+            "\u5080\u5121\u5E08"
+        ],
+        "name": "\u98CE\u4E38",
+        "en": "Kazemaru",
+        "team": [
+            "\u4E1C"
+        ],
+        "race": [
+            "\u83F2\u6797"
+        ],
+        "rarity": 4,
+        "painter": "\u6E29\u6CC9\u74DC"
+    },
+    {
+        "className": [
+            "\u7279\u79CD",
+            "\u63A8\u51FB\u624B"
+        ],
+        "name": "\u89C1\u884C\u8005",
+        "en": "Enforcer",
+        "team": [
+            "\u62C9\u7279\u5170"
+        ],
+        "race": [
+            "\u8428\u79D1\u5854"
+        ],
+        "rarity": 4,
+        "painter": "Chuzenji"
     }
 ]
